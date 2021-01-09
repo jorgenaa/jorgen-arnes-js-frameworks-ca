@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Home from '../views/home/Home';
 import GameDetails from '../views/gameDetails/GameDetails';
+import Contact from '../views/contact/Contact';
 
 export const Layout = () => {
     return (
@@ -25,7 +26,7 @@ export const Layout = () => {
             <div>
                 <Switch>
                         <Route path="/" exact component={Home} />
-                        {/* <Route path="/contact" component={Contact} />  */}
+                        <Route path="/contact" component={Contact} /> 
                         <Route path="/gameDetails/:id" component={GameDetails} />
                 </Switch>
             </div>

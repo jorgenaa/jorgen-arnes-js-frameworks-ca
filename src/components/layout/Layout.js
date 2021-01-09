@@ -2,9 +2,11 @@ import React from 'react';
 import {
 	BrowserRouter as Router,
 	Switch,
-   // Route,
+    Route,
 	NavLink,
 } from 'react-router-dom';
+import Home from '../views/home/Home';
+import GameDetails from '../views/gameDetails/GameDetails';
 
 export const Layout = () => {
     return (
@@ -22,8 +24,9 @@ export const Layout = () => {
             </div>
             <div>
                 <Switch>
-                        {/* <Route path="/" exact component={Home} />
-                        <Route path="/contact" component={Contact} /> */}
+                        <Route path="/" exact component={Home} />
+                        {/* <Route path="/contact" component={Contact} />  */}
+                        <Route path="/gameDetails/:id" component={GameDetails} />
                 </Switch>
             </div>
         </Router>

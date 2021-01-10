@@ -8,6 +8,7 @@ import {
 import Home from '../views/home/Home';
 import GameDetails from '../views/gameDetails/GameDetails';
 import Contact from '../views/contact/Contact';
+import Favourites from '../views/favourites/Favourites';
 
 export const Layout = () => {
     return (
@@ -17,9 +18,11 @@ export const Layout = () => {
                     <NavLink className="router__link router__link--hover" activeClassName="router__link--active" to="/" exact={true}>
                         Home
                     </NavLink>
-                    
                     <NavLink className="router__link router__link--hover" activeClassName="router__link--active" to="/contact/">
                         Contact
+                    </NavLink>
+                    <NavLink className="router__link router__link--hover" activeClassName="router__link--active" to="/favourites/">
+                        Favourites
                     </NavLink>
                 </nav>
             </div>
@@ -28,6 +31,7 @@ export const Layout = () => {
                         <Route path="/" exact component={Home} />
                         <Route path="/contact" component={Contact} /> 
                         <Route path="/gameDetails/:id" component={GameDetails} />
+                        <Route path="/favourites" component={Favourites} />
                 </Switch>
             </div>
         </Router>

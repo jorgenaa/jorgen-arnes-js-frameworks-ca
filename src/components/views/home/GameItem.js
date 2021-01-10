@@ -1,13 +1,21 @@
 import React from 'react'; 
 import { Link } from "react-router-dom";
 import {PropTypes} from "prop-types";
+import FavButton from '../../../utils/FavButton';
 
 const GameItem = ({title, image, rating, release, id}) => {
  
     return (
         <div className="card card--hover" key={id}>
             <img src={image} className="card__img" alt="game" /> 
-           
+            <FavButton
+                id={id}
+                title={title}
+                image={image} 
+                rating={rating} 
+                release={release} 
+                
+                />
             <div className="card__body">
                 <h5 className="card__title">{title}</h5>
                 <p className="card__text"><span className="card__span">Rating:</span>{rating}</p>
